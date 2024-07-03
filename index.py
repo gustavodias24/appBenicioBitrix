@@ -6,7 +6,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     args = request.args
-    body = request.json
+
+    if not (body := request.json):
+        body = {}
 
     return jsonify({
         "args": args,
