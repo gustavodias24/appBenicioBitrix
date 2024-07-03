@@ -7,12 +7,8 @@ app = Flask(__name__)
 def index():
     args = request.args
 
-    if not (body := request.json):
-        body = {}
-
     return jsonify({
-        "args": args,
-        "body": body
+        "args": args
     })
 
 
