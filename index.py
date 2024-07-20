@@ -36,5 +36,11 @@ def refresh():
     return jsonify(response.json())
 
 
+@app.route('/myhandler', methods=["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"])
+def my_handler():
+    metodo_chamado = request.method
+    return jsonify({"funfando": "sim", "metodo_chamado": metodo_chamado})
+
+
 if __name__ == "__main__":
     app.run()
