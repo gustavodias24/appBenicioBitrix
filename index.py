@@ -3,6 +3,9 @@ import requests
 
 app = Flask(__name__)
 
+client_scret = "io29XDkBsjeRkh4U2zpG0G5jhPJJBNKpybA29VsXqtS2woIDov"
+client_id = "local.669bbb5f70bf42.85105579"
+
 
 @app.route("/")
 def index():
@@ -10,8 +13,8 @@ def index():
 
     code = args.get('code')
 
-    url = (f"https://oauth.bitrix.info/oauth/token/?client_id=local.6684443e2eb8f5.18028528&client_secret"
-           f"=5I0F06k4ZLXn9LV4pfcE4rUh24X2TRehm82taFsWKiExgKI075&code={code}&grant_type=authorization_code")
+    url = (f"https://oauth.bitrix.info/oauth/token/?client_id={client_id}&client_secret"
+           f"={client_scret}&code={code}&grant_type=authorization_code")
 
     response = requests.request("GET", url)
 
@@ -24,8 +27,8 @@ def refresh():
 
     refresh_token = args.get('refresh_token')
 
-    url = (f"https://oauth.bitrix.info/oauth/token/?client_id=local.6684443e2eb8f5.18028528&client_secret"
-           f"=5I0F06k4ZLXn9LV4pfcE4rUh24X2TRehm82taFsWKiExgKI075&refresh"
+    url = (f"https://oauth.bitrix.info/oauth/token/?client_id={client_id}&client_secret"
+           f"={client_scret}&refresh"
            f"_token={refresh_token}&grant_type=refresh_token")
 
     response = requests.request("GET", url)
