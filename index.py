@@ -9,7 +9,7 @@ client_id = "local.669bbb5f70bf42.85105579"
 
 @app.route("/", methods=["POST"])
 def my_handler():
-    return jsonify({"funfando": "sim"})
+    return jsonify({"funfando": request.json})
 
 
 @app.route("/token")
