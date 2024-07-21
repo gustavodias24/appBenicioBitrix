@@ -7,7 +7,12 @@ client_scret = "io29XDkBsjeRkh4U2zpG0G5jhPJJBNKpybA29VsXqtS2woIDov"
 client_id = "local.669bbb5f70bf42.85105579"
 
 
-@app.route("/")
+@app.route("/", methods=["POST"])
+def my_handler():
+    return jsonify({"funfando": "sim"})
+
+
+@app.route("/token")
 def index():
     args = request.args
 
