@@ -3,8 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-client_scret = ""
-client_id = ""
+client_scret = "io29XDkBsjeRkh4U2zpG0G5jhPJJBNKpybA29VsXqtS2woIDov"
+client_id = "local.669bbb5f70bf42.85105579"
 
 
 @app.route("/token")
@@ -37,4 +37,4 @@ def refresh():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=SUA_PORTA)
+    app.run(host='0.0.0.0')
