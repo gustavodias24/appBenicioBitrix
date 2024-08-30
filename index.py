@@ -3,8 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-client_scret = "io29XDkBsjeRkh4U2zpG0G5jhPJJBNKpybA29VsXqtS2woIDov"
-client_id = "local.669bbb5f70bf42.85105579"
+client_scret = "4d68Z5SJ7ElR15ZP5MmRcFgjAIjStw1ssPBTxEWBD7rJBed4s7"
+client_id = "local.66d1c791da7085.38798748"
 
 
 @app.route("/token")
